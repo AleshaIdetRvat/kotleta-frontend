@@ -53,7 +53,7 @@ export const ImageContainer = (props: Props) => {
         !imageQuery.isLoading && !imageQuery.isError && !!imagePredictions?.length;
 
     const containerClassName =
-        "relative transition-all rounded-lg h-[40rem]  border-gray-300 border-solid";
+        "relative transition-all rounded-lg max-h-[40rem] min-h-10 border-gray-300 border-solid";
 
     const predictionsCount = imagePredictions?.length || 0;
 
@@ -103,7 +103,7 @@ export const ImageContainer = (props: Props) => {
                             <li
                                 key={prediction.detection_id}
                                 className={
-                                    "hover:border-red-400 hover:z-10 box-border absolute border-lime-400 border-solid border"
+                                    "hover:z-10 box-border absolute border-lime-400 border-solid border"
                                 }
                                 style={{ ...prediction.style }}
                             >
@@ -125,7 +125,7 @@ export const ImageContainer = (props: Props) => {
                 {props.imageSrc ? (
                     <img
                         alt=""
-                        className="h-[40rem] w-auto rounded-lg"
+                        className="max-h-[40rem] min-h-10 w-auto rounded-lg"
                         src={props.imageSrc}
                     />
                 ) : (

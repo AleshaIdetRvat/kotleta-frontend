@@ -69,15 +69,15 @@ function AttachFile({
         >
             <label
                 htmlFor="dropzone-file"
-                className="flex flex-col items-center justify-center w-full min-w-80 px-6 py-4 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                className="flex flex-col items-center justify-center w-full min-w-80 px-6 py-4 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
             >
                 <div className="flex flex-col items-center justify-center">
                     {fileName ? (
-                        <AiFillFile className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400" />
+                        <AiFillFile className="w-5 h-5 mb-1 text-gray-500" />
                     ) : (
-                        <AiFillFileAdd className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400" />
+                        <AiFillFileAdd className="w-5 h-5 mb-1 text-gray-500" />
                     )}
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <p className="text-sm text-gray-500">
                         {fileName || "Нажмите чтобы добавить файл"}
                     </p>
                 </div>
